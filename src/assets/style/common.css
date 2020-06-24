@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: ease-in-out 500ms;
+    font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Arial", "Verdana", "Microsoft Yahei", sans-serif;
+    transition-property: background, color, border, width, height, margin, padding, top, right, bottom, left, transform, opacity, visibility, zoom;
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%
+}
+
+address, cite, dfn, em, var {
+    font-style: normal
+}
+
+code, kbd, pre, samp {
+    font-family: courier new, courier, monospace
+}
+
+small {
+    font-size: 12px
+}
+
+ol, ul {
+    list-style: none
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+legend {
+    color: #000
+}
+
+fieldset, img {
+    border: 0
+}
+
+button, input, select, textarea {
+    font-size: 100%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    filter: brightness(150%);
+}
+
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    border: 1px solid #CCC !important;
+}
+
+.background {
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+}
+
+.cover {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.flex{
+    display: flex;
+}
+.flex-vertical,.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-vertical-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-vertical-space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-vertical-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}
