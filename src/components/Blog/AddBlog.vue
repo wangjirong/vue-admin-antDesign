@@ -53,8 +53,8 @@
         <a-switch v-model="form.delivery" />
       </a-form-model-item>
       <a-form-model-item label="文章标签" prop="tags">
-        <a-checkbox-group v-model="form.tags">
-          <a-checkbox v-for="item in tagList" :key="item._id" :value="item.tagName" name="tags">{{item.tagName}}</a-checkbox>
+        <a-checkbox-group v-model="form.tags" class="flex-vertical-center">
+          <a-checkbox v-for="item in tagList" :key="item._id" :value="item.tagName" name="tags" style="margin:0.3em">{{item.tagName}}</a-checkbox>
         </a-checkbox-group>
       </a-form-model-item>
       <a-form-model-item label="md" prop="context">

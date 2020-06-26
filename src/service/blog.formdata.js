@@ -7,6 +7,7 @@ export function formBlogList(blogList) {
         blog.commentCount = blog.comment.length
         blog.tag = blog.tags.join('、');
         blog.delivery = blog.delivery === true ? "yes" : "no"
+        blog.stick = blog.stick === true ? "yes" : "no"
         return blog
     })
     return blogList

@@ -15,6 +15,9 @@ export const routes = [{
                 {
                     path: '/blog/blogList',
                     component: () => import('../components/Blog/BlogList'),
+                },{
+                    path: '/blog/stickBlog',
+                    component: () => import('../components/Blog/StickBlog'),
                 }
             ]
         },

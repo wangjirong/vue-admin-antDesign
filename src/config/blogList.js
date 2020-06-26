@@ -34,13 +34,13 @@ const columns = [
       width: 100,
       align: "center"
     },
-    // {
-    //   title: "评论数量",
-    //   dataIndex: "commentCount",
-    //   key: "commentCount",
-    //   width: 60,
-    //   align: "center"
-    // },
+    {
+      title: "是否置顶",
+      dataIndex: "stick",
+      key: "stick",
+      width: 60,
+      align: "center"
+    },
     {
       title: "概述",
       dataIndex: "desc",

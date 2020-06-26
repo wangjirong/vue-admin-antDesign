@@ -1,7 +1,7 @@
 <template>
   <div class="blog-list">
     <a-table :columns="columns" :data-source="data" :scroll="{ x: '100%', y: '100%' }" rowKey="_id" >
-      <span slot="action" slot-scope="record" class="flex-vertical-center">
+      <template slot="action" slot-scope="record" class="flex-vertical-center">
         <a-popconfirm
           title="确定删除该文章吗?"
           placement="leftTop"
@@ -13,7 +13,7 @@
           <a-button type="danger">删除</a-button>
         </a-popconfirm>
         <a-button type="primary" style="marginLeft:10px">编辑</a-button>
-      </span>
+      </template>
     </a-table>
   </div>
 </template>

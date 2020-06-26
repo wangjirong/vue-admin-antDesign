@@ -11,6 +11,9 @@
           <a-menu-item key="2">
             <router-link to="/blog/blogList">博客列表</router-link>
           </a-menu-item>
+          <a-menu-item key="3">
+            <router-link to="/blog/stickBlog">置顶管理</router-link>
+          </a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="diary">
           <span slot="title"><a-icon type="cluster" /><span>日志</span></span>
