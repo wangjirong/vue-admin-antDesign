@@ -53,6 +53,12 @@
             <router-link to="/tags/tagsList">标签列表</router-link>
           </a-menu-item>
         </a-sub-menu>
+        <a-sub-menu key="links">
+          <span slot="title"><a-icon type="link" /><span>友链</span></span>
+          <a-menu-item key="11">
+            <router-link to="/links/linksList">链接列表</router-link>
+          </a-menu-item>
+        </a-sub-menu>
       </a-menu>
     </a-layout-sider>
     <a-layout>

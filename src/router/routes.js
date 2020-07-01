@@ -69,6 +69,15 @@ export const routes = [{
                 path:'/tags/tagsList',
                 component:()=>import('../components/Tag/TagList')
             }]
+        },
+        {
+            path:'/links',
+            component:()=>import('../components/Link/index'),
+            redirect: '/links/linksList',
+            children: [{
+                path:'/links/linksList',
+                component:()=>import('../components/Link/LinksList.vue')
+            }]
         }
     ]
     },
