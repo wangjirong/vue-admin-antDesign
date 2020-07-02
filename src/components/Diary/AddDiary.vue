@@ -24,7 +24,7 @@
         </div>
       </a-upload>
 
-      <a-button type="primary" @click.native="submit">
+      <a-button type="primary" @click="submit">
         提交
       </a-button>
     </div>
