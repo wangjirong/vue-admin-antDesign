@@ -3,6 +3,9 @@ export const routes = [{
         name: 'Home',
         component: () => import('../views/Home'),
         redirect: '/blog',
+        meta:{
+            title:"首页",
+        },
         children: [
             {
             path: '/blog',
@@ -84,11 +87,17 @@ export const routes = [{
     {
         path: '/login',
         name: 'Login',
+        meta:{
+            title:"登录"
+        },
         component: () => import('../views/Login')
     },
     {
         path: '/register',
         name: 'Register',
+        meta:{
+            title:"注册"
+        },
         component: () => import('../views/Register')
     },
 ]
