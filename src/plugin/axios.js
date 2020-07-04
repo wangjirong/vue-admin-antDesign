@@ -2,15 +2,12 @@ import axios from 'axios';
 import {
     message
 } from 'ant-design-vue'
-axios.defaults.headers.post['Content-Type'] = ['application/x-www-form-urlencoded', 'application/form-data'];
-axios.defaults.timeout = 1000 * 10;
-axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://api.cirev.cn"
 
 
-//请求拦截
+// 请求拦截
 axios.interceptors.request.use(config => {
-    const token = sessionStorage.getItem('eleToken');
+    message.loading("加载中",500)
+    const token = sessionStorage.getItem('token');
     if (token)
         config.headers.Authorization = token;
     return config;
@@ -20,21 +17,29 @@ axios.interceptors.request.use(config => {
 })
 
 
-//响应拦截
+// //响应拦截
 axios.interceptors.response.use(response => {
     return response;
 }, error => {
-    endLoading();
     message.error(error.response.data);
     const status = error.response.status;
     if (status === 401) {
         message.error("登录超时，请重新登录"); //token过期登录超时
 
-        sessionStorage.removeItem('eleToken');
+        sessionStorage.removeItem('token');
         this.$routes.push('/login');
     }
     return Promise.reject(error);
 })
 
+// axios.defaults.headers.post['Content-Type'] = ['application/x-www-form-urlencoded', 'application/form-data'];
+// axios.defaults.timeout = 1000 * 10;
+// axios.defaults.withCredentials = true;
+// // axios.defaults.baseURL = "http://api.cirev.cn"
+// axios.defaults.baseURL = "http://localhost:9000"
 
-export default axios
+
+
+export default axios.create({
+    baseURL: "http://localhost:9000"
+})

@@ -18,21 +18,19 @@ import {
 } from 'ant-design-vue'
 
 router.beforeEach((to, from, next) => {
-    if (to.meta)
-        document.title = to.meta.title;
-    const token = sessionStorage.getItem('eleToken');
+    if (to.meta.title)
+      document.title = to.meta.title;
+    const token = sessionStorage.getItem('token');
     if (token) next();
     else {
-        if (to.path === "/login" || to.path === "/register") next();
+      if (to.matched.some(record => record.meta.requireAuth)) {
+        if (to.name === 'Login') next();
         else {
             message.error("请先登录");
-            next({
-                name: 'Login'
-            })
+          next({ name: 'Login' });
         }
-        next();
+      }
+      else next();
     }
-
-})
-
+  })
 export default router
