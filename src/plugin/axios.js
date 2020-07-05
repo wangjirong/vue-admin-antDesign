@@ -41,5 +41,6 @@ axios.interceptors.response.use(response => {
 
 
 export default axios.create({
-    baseURL: "http://localhost:9000"
+    baseURL: "http://api.cirev.cn"
+    // baseURL:'http://localhost:9000'
 })
